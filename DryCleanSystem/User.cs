@@ -27,5 +27,6 @@ namespace DryCleanSystem
         abstract public void register(string userName, string password, string confirmPassword, string phone, string address, string role);
         abstract public bool login(string userName, string password);
         abstract public void logout();
+
     }
 }

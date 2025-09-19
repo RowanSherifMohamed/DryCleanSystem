@@ -16,6 +16,7 @@ namespace DryCleanSystem
             Console.WriteLine($"Service ID: {id}");
             Console.WriteLine($"Service Name: {name}");
             Console.WriteLine($"Service Price: {price}");
+
         }
     }
 }
