@@ -8,14 +8,15 @@ namespace DryCleanSystem
 {
     public class Service
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public double price { get; set; }
+        public int ServiceId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
 
-        public void dispalyService() {
-            Console.WriteLine($"Service ID: {id}");
-            Console.WriteLine($"Service Name: {name}");
-            Console.WriteLine($"Service Price: {price}");
+        public Service(int serviceId, string name, decimal price)
+        {
+            ServiceId = serviceId;
+            Name = name;
+            Price = price;
         }
     }
 }

@@ -6,28 +6,25 @@ using System.Threading.Tasks;
 
 namespace DryCleanSystem
 {
+    using System;
+    using System.Collections.Generic;
+
     public abstract class User
     {
-        // abstract class has 3 childs ( s)
-        // another comment by mohamed aboelyazid
-        public int id { get; set; }
-        public string userName { get; set; }
-        public string password { get; set; }
-        public string phone { get; set; }
-        public string address { get; set; }
-        public string role { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Address { get; set; }
 
-        public User(int id, string userName, string password, string phone, string address, string role) {
-            this.id = id;
-            this.userName = userName;
-            this.password = password;
-            this.phone = phone;
-            this.address = address;
-            this.role = role;
+        public abstract bool Login(string userName, string password);
+
+        // Common constructor for all user types
+        public User(string userName, string password, string phoneNumber = null, string address = null)
+        {
+            UserName = userName;
+            Password = password;
+            PhoneNumber = phoneNumber;
+            Address = address;
         }
-
-        abstract public void register(string userName, string password, string confirmPassword, string phone, string address, string role);
-        abstract public bool login(string userName, string password);
-        abstract public void logout();
     }
 }
