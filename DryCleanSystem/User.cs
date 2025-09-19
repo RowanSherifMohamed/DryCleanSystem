@@ -8,6 +8,8 @@ namespace DryCleanSystem
 {
     public abstract class User
     {
+        // abstract class has 3 childs ( s)
+        // another comment by mohamed aboelyazid
         public int id { get; set; }
         public string userName { get; set; }
         public string password { get; set; }
