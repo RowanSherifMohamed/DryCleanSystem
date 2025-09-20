@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Mostafa",
+    "password": "driver123",
+    "phone": "95396628946",
+    "address": "driver1 address",
+    "role": "driver"
+  },
+  {
+    "id": 3,
+    "name": "khaled",
+    "password": "khaled1010",
+    "phone": "945279257",
+    "address": "khaled address",
+    "role": "driver"
+  }
+]

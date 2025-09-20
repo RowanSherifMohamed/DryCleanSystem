@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Dry cleaning",
+    "price": 50
+  },
+  {
+    "id": 2,
+    "name": "Wah & fold",
+    "price": 40
+  },
+  {
+    "id": 3,
+    "name": "Ironing",
+    "price":  25
+  }
+]

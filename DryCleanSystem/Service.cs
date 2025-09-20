@@ -8,9 +8,14 @@ namespace DryCleanSystem
 {
     public class Service
     {
+        private static int counter = 1;
         public int id { get; set; }
         public string name { get; set; }
         public double price { get; set; }
+
+        Service() { 
+          id = ++counter;
+        }
 
         public void dispalyService() {
             Console.WriteLine($"Service ID: {id}");

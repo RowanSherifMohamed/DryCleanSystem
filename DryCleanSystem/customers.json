@@ -1,0 +1,42 @@
+[
+  {
+    "walletBalance": 500,
+    "orders": [],
+    "id": 1,
+    "name": "Rowan",
+    "password": "12345",
+    "phone": "5974295762",
+    "address": "customer1 address",
+    "role": "customer"
+  },
+  {
+    "walletBalance": 300,
+    "orders": [],
+    "id": 2,
+    "name": "Ali",
+    "password": "customer123",
+    "phone": "9435794356",
+    "address": "customer2 address",
+    "role": "customer"
+  },
+  {
+    "walletBalance": 400,
+    "orders": null,
+    "id": 4,
+    "name": "Sara",
+    "password": "sara@82",
+    "phone": "813468129",
+    "address": "sara address",
+    "role": "Customer"
+  },
+  {
+    "walletBalance": 200,
+    "orders": null,
+    "id": 6,
+    "name": "Rowan",
+    "password": "rowan@123",
+    "phone": "7534956",
+    "address": "address1",
+    "role": "Customer"
+  }
+]
