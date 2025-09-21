@@ -13,13 +13,13 @@ namespace DryCleanSystem
         public string status { get; set; }
         public double totalCost { get; set; }
 
-        public Customer customer { get; set; }
+        //public Customer customer { get; set; }
 
         public Driver assignedDriver { get; set; }
         public List<Service> services { get; set; }
 
         public Order() {
-            id = ++counter;
+            id = counter + 1;
         }
         public void calculateTotalCost() {
             totalCost = 0;

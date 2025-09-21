@@ -5,13 +5,8 @@
     "price": 50
   },
   {
-    "id": 2,
-    "name": "Wah & fold",
-    "price": 40
-  },
-  {
     "id": 3,
     "name": "Ironing",
-    "price":  25
+    "price": 25
   }
 ]

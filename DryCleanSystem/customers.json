@@ -30,8 +30,202 @@
     "role": "Customer"
   },
   {
-    "walletBalance": 200,
-    "orders": null,
+    "walletBalance": 360,
+    "orders": [
+      {
+        "id": 2,
+        "status": null,
+        "totalCost": 75,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "status": "pending",
+        "totalCost": 50,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "status": "pending",
+        "totalCost": 90,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 2,
+            "name": "Wah \u0026 fold",
+            "price": 40
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "status": "pending",
+        "totalCost": 40,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 2,
+            "name": "Wah \u0026 fold",
+            "price": 40
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "status": "pending",
+        "totalCost": 115,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 2,
+            "name": "Wah \u0026 fold",
+            "price": 40
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "status": "pending",
+        "totalCost": 115,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 2,
+            "name": "Wah \u0026 fold",
+            "price": 40
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "status": "pending",
+        "totalCost": 115,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 2,
+            "name": "Wah \u0026 fold",
+            "price": 40
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "status": "pending",
+        "totalCost": 75,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "status": "pending",
+        "totalCost": 75,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          },
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "status": "pending",
+        "totalCost": 50,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 1,
+            "name": "Dry cleaning",
+            "price": 50
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "status": "pending",
+        "totalCost": 25,
+        "assignedDriver": null,
+        "services": [
+          {
+            "id": 3,
+            "name": "Ironing",
+            "price": 25
+          }
+        ]
+      }
+    ],
     "id": 6,
     "name": "Rowan",
     "password": "rowan@123",

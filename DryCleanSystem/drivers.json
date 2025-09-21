@@ -14,5 +14,13 @@
     "phone": "945279257",
     "address": "khaled address",
     "role": "driver"
+  },
+  {
+    "id": 2,
+    "name": "Ali",
+    "password": "ali@123",
+    "phone": "59369369",
+    "address": "ali\u0027s address",
+    "role": "Driver"
   }
 ]

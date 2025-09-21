@@ -13,8 +13,8 @@ namespace DryCleanSystem
         public string name { get; set; }
         public double price { get; set; }
 
-        Service() { 
-          id = ++counter;
+        public Service() { 
+          id = counter + 1;
         }
 
         public void dispalyService() {

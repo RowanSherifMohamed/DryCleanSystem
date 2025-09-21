@@ -46,21 +46,31 @@ namespace DryCleanSystem
             Console.WriteLine("Enter address: ");
             address = Console.ReadLine();
         }
-        public bool login(string name, string password) {
+        public static User login(string name, string password,List<Customer> customers,
+                         List<Admin> admins, List<Driver> drivers) {
 
-            if(this.name == name && this.password == password)
-    {
-                Console.WriteLine("logged in successfully.");
-                loginStatus = true;
-                return true;
-            }
-            else
+            foreach (var customer in customers)
             {
-                Console.WriteLine("Invalid username or password!");
-                loginStatus=false;
-                return false;
+                if (customer.name == name && customer.password == password)
+                {
+                    return customer;
+                }
             }
-
+            foreach (var admin in admins)
+            {
+                if (admin.name == name && admin.password == password)
+                {
+                    return admin;
+                }
+            }
+            foreach (var driver in drivers)
+            {
+                if (driver.name == name && driver.password == password)
+                {
+                    return driver;
+                }
+            }
+            return null;
         }
         public void logout() {
             Console.WriteLine($"{name} logged out.");

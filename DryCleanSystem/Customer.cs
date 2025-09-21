@@ -10,19 +10,21 @@ using System.Xml.Linq;
 
 namespace DryCleanSystem
 {
-    public class Customer : User
+    public class Customer : User, IUser
     {
         private static int counter = 1;
         public double walletBalance { get; set; }
-        public List<Order> orders { get; set; }
+        public List<Order> orders { get; set; } = new List<Order>();
         public Customer() {
-            id = ++counter;
+            id = counter + 1;
+            orders = new List<Order>();
         }
         public Customer(int id, string userName, string password, string phone, string address, string role, double walletBalance) 
             : base(id, userName, password, phone, address, role)
         {
             id = ++counter;
             this.walletBalance = walletBalance;
+            orders = new List<Order>();
         }
         public override void register()
         {
@@ -34,14 +36,28 @@ namespace DryCleanSystem
             
         public void addToWallet(double amount) {
            walletBalance = walletBalance + amount;
+            Console.WriteLine($"{amount} pounds added successfully, your wallet balance = {walletBalance}");
         }
 
-        public void createOrder(List<Service> orderServices) { 
-            Order order = new Order() {customer = this, services = orderServices};
+        public Order createOrder(List<Service> orderServices) {
+            if (orders == null)
+            {
+                orders = new List<Order>();
+            }
+
+            Order order = new Order
+            {
+                status = "pending",
+                services = orderServices
+            };
+
+            order.calculateTotalCost();
             orders.Add(order);
+            return order;
         }
 
-        public void orderPayment(Order order) {
+        public void orderPayment(Order order)
+        {
             if (walletBalance >= order.totalCost)
             {
                 walletBalance -= order.totalCost;
@@ -51,7 +67,7 @@ namespace DryCleanSystem
             {
                 Console.WriteLine("Insufficient balance! Please recharge your wallet.");
             }
-            } 
+        }
 
         public void viewOrder() {
             foreach (Order order in orders) {
@@ -59,7 +75,13 @@ namespace DryCleanSystem
                 Console.WriteLine($"driver name: {order.assignedDriver.name}");
                 Console.WriteLine($"Order cost: {order.totalCost}");
                 Console.WriteLine($"Order status: {order.status}");
+                Console.WriteLine("===================================");
             }
+        }
+
+        public void showUserType()
+        {
+            Console.WriteLine("I'm a customer");
         }
     }
 }

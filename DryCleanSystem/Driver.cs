@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DryCleanSystem
 {
-    public class Driver : User
+    public class Driver : User, IUser
     {
         private static int counter = 1;
-        List<Order> allOrders;
-        public Driver() {
-            id = ++counter;
+        public Driver()
+        {
+            id = counter + 1;
         }
         public Driver(int id, string userName, string password, string phone, string address, string role) : base(id, userName, password, phone, address, role)
         {
@@ -23,14 +23,46 @@ namespace DryCleanSystem
             role = "Driver";
         }
 
-        public void updateOrderStatus(Order order, string status) {
-            order.updateStatus(status);
-            Console.WriteLine($"Order {order.id} status updated to {status}");
+        public void showUserType()
+        {
+            Console.WriteLine( "I'm a Driver");
         }
 
-        public void viewAssignedOrder() {
-            foreach (var order in allOrders.Where(o => o.assignedDriver == this))
-                Console.WriteLine($"Order{allOrders.Count} {order.id} - {order.services} - {order.customer.name} - {order.totalCost}");
+        public void updateOrderStatus(List<Order>orders,int orderId, string status)
+        {
+            Order orderToUpdate = null;
+
+            foreach (var o in orders)
+            {
+                if (o.id == orderId && o.assignedDriver != null && o.assignedDriver.id == this.id)
+                {
+                    orderToUpdate = o;
+                    break; 
+                }
+            }
+
+            if (orderToUpdate == null)
+            {
+                Console.WriteLine($"Order with ID {orderId} not found or not assigned to you.");
+                return;
+            }
+
+            orderToUpdate.updateStatus(status);
+            Console.WriteLine($"Order {orderToUpdate.id} status updated to {status}");
+        }
+
+        public List<Order> viewAssignedOrder(List<Order> orders)
+        {
+            List<Order> myOrders = new List<Order>();
+
+            foreach (var order in orders)
+            {
+                if (order.assignedDriver != null && order.assignedDriver.id == this.id)
+                {
+                    myOrders.Add(order);
+                }
+            }
+            return myOrders;
         }
     }
     }
